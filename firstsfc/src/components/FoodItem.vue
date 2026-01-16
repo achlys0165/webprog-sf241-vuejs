@@ -9,8 +9,8 @@
 export default {
   data() {
     return {
-      name: 'Ice Cream',
-      message: 'I like Ice Cream'
+      name: 'Ulam',
+      message: 'I want adobo, tinola, at sisig'
     }
   }
 };
