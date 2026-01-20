@@ -257,36 +257,51 @@
 </template>
 
 <script>
-
-window.addEventListener('scroll', () => {
-    const hero = document.getElementById('home');
-    if (hero) hero.style.opacity = 1 - window.scrollY / 600;
-});
-</script>
-
-<script>
-const app = Vue.createApp({
+export default {
     data() {
         return {
             scrollPercent: 0,
             galleryImages: [
-                'img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg',
-                'img6.jpg','img7.jpg','img8.jpg','img9.jpg','img10.jpg'
+                'img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg',
+                'img6.jpg', 'img7.jpg', 'img8.jpg', 'img9.jpg', 'img10.jpg'
             ]
         }
     },
     methods: {
         scrollGallery(dir) {
-            const c = this.$refs.galleryWrapper;
-            c.scrollLeft += dir === 'left' ? -430 : 430;
+            const container = this.$refs.galleryWrapper;
+            if (container) {
+                const scrollAmount = 430;
+                container.scrollBy({
+                    left: dir === 'left' ? -scrollAmount : scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
         },
         updateProgress() {
-            const c = this.$refs.galleryWrapper;
-            this.scrollPercent = (c.scrollLeft / (c.scrollWidth - c.clientWidth)) * 100;
+            const container = this.$refs.galleryWrapper;
+            if (container) {
+                const maxScroll = container.scrollWidth - container.clientWidth;
+                this.scrollPercent = maxScroll > 0 ? (container.scrollLeft / maxScroll) * 100 : 0;
+            }
+        },
+        handleHeroScroll() {
+            const hero = document.getElementById('home');
+            if (hero) {
+                hero.style.opacity = Math.max(0, 1 - window.scrollY / 600);
+            }
         }
+    },
+    mounted() {
+        // Initialize progress bar
+        this.updateProgress();
+        // Add the scroll listener when the component loads
+        window.addEventListener('scroll', this.handleHeroScroll);
+    },
+    unmounted() {
+        // Clean up the listener when the component is destroyed to prevent memory leaks
+        window.removeEventListener('scroll', this.handleHeroScroll);
     }
-});
-app.mount('#app');
-
+}
 </script>
 <style src="./css/personalprofile.css"></style>
