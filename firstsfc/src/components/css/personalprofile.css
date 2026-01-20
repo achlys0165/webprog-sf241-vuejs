@@ -1,0 +1,339 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap);
+
+:root {
+    --bg: #000000;
+    --gold: #FFA500;
+    --card-bg: rgba(20, 20, 20, 0.95);
+}
+
+* {
+    font-family: 'Inter', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg) !important;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Background Gradients from original source */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(800px 800px at 80% 40%, rgba(255,140,0,0.06), transparent 50%),
+        radial-gradient(1000px 1000px at 50% 50%, rgba(0,0,0,0.95), #000); 
+    z-index: -1;
+}
+
+/* Navbar Restored */
+.navbar {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.navbar-brand { font-weight: 800; color: #fff !important; }
+.nav-link { color: #ffffff !important; opacity: 0.7; transition: 0.3s; }
+.nav-link:hover, .nav-link.active { opacity: 1; color: var(--gold) !important; }
+
+/* Main Hero Section */
+.name {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8vw; 
+    gap: 2rem;
+}
+
+.name-card {
+    max-width: 600px;
+    z-index: 5;
+}
+
+.name-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 15px 0; 
+}
+
+.name-text {
+    opacity: 0.8;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px; 
+}
+
+
+/* Navigation Buttons */
+.btn-nav {
+    background: rgba(255, 165, 0, 0.1);
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    color: var(--gold);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.btn-nav:hover {
+    background: var(--gold);
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Progress Bar */
+.scroll-progress-container {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: var(--gold);
+    width: 0%;
+    transition: width 0.2s ease-out;
+}
+
+/* Ensure wrapper handles smooth behavior */
+.gallery-wrapper {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tags {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+}
+
+/* Socials Styling */
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-link-item {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7; /* Matches your secondary text opacity [cite: 30] */
+}
+
+.social-link-item:hover {
+    transform: translateY(-5px); /* Smooth lift effect [cite: 40] */
+    opacity: 1;
+}
+
+.social-img {
+    width: 32px; /* Set your preferred size */
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Profile Image & Glow Restored */
+.name-profile {
+    position: relative;
+    width: 45%;
+    display: flex;
+    justify-content: center; 
+}
+
+.name-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%); 
+}
+
+.name-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: var(--gold);
+    filter: blur(100px);
+    opacity: 0.15; 
+    z-index: -1;
+}
+
+/* Large Carousel Card Styles */
+.profile-card-large {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.profile-card-large:hover {
+    border-color: var(--gold);
+}
+
+.card-badge-static {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: var(--gold);
+    background: rgba(255, 165, 0, 0.1);
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.text-gold { color: var(--gold); }
+
+/* Customizing Carousel Controls */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    opacity: 0.5;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--gold);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+/* Ensure text is scannable in the slide */
+.carousel-item p, .carousel-item li {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+/* Sub-page Containers */
+.content-section {
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+/* Gallery Grid */
+/* Container for Horizontal Scrolling */
+.gallery-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scroll */
+    overflow-y: hidden; /* Prevents vertical scroll */
+    white-space: nowrap; /* Keeps items in a single line */
+    padding: 50px 0 80px 50px;
+    scrollbar-width: none; /* Hides scrollbar for Firefox */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /* Makes pictures snap into place */
+}
+
+/* Hides scrollbar for Chrome/Safari */
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-scroll-container {
+    display: inline-flex;
+    gap: 30px;
+}
+
+.gallery-item {
+    flex: 0 0 auto; /* Prevents images from shrinking */
+    width: 400px; /* Adjust size to your preference */
+    height: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    
+    /* Initial state for Fading Transition */
+    opacity: 0.1; 
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Visible state triggered by JavaScript */
+.gallery-item.is-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+    border-color: #FFA500; /* Gold border on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Form Elements */
+.form-control {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    padding: 15px;
+}
+
+/* --- Navigation Visibility Fixes --- */
+
+/* Make the hamburger icon visible on dark backgrounds */
+.navbar-toggler-icon {
+    filter: invert(1) brightness(2); /* Changes the black icon to white */
+}
+
+/* Style the toggle button border */
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ensure navbar stays on top of the hero content */
+.navbar {
+    z-index: 1030; /* Higher than the name-card z-index [cite: 73] */
+}
+
+@media (max-width: 991px) {
+    /* Ensure the background is dark enough when menu is expanded */
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+}
