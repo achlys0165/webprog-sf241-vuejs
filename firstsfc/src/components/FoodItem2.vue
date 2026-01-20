@@ -1,5 +1,5 @@
 <template>
-  <div class="ulam">
+  <div class="jabe">
     <h2>{{ name }}</h2>
     <p>{{ message }}</p>
   </div>
@@ -9,19 +9,19 @@
 export default {
   data() {
     return {
-      name: 'Ulam',
-      message: 'I want adobo, tinola, at sisig'
+      name: 'Chicken, Spaghetti, and fries',
+      message: 'I want Chicken, Spaghetti, and fries'
     }
   }
 };
 </script>
  
 <style>
- .ulam {
+ .jabe {
     border: dashed black 1px;
     display: inline-block;
     margin: 10px;
     padding: 10px;
-    background-color: green;
+    background-color: red;
   }
 </style>
