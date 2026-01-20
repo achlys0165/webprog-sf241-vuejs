@@ -228,7 +228,7 @@
     </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECTS --> 
 <section id="projects" class="container mt-5 pt-5 text-center">
     <div class="profile-card py-5">
         <h2 class="text-gold fw-bold display-4">Projects</h2>
