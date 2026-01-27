@@ -315,4 +315,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style src="./css/personalprofile.css"></style>
+
