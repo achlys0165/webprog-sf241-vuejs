@@ -1,14 +1,4 @@
 <template>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jan Sultan | Portfolio</title>
-
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Vue (for Gallery only) -->
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#home">Jan Sultan</a>
@@ -212,7 +202,7 @@
 
 <!-- GALLERY -->
 <section id="gallery" class="container mt-5 pt-5">
-    <div id="app">
+    <div class="gallery-root">
         <div class="d-flex justify-content-between align-items-end">
             <div>
                 <h2 class="text-white fw-bold display-5">Gallery</h2>
@@ -314,4 +304,6 @@ export default {
     }
 }
 </script>
+
 <style src="./css/personalprofile.css"></style>
+

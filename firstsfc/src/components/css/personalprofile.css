@@ -14,9 +14,13 @@
 }
 
 body {
-    background-color: var(--bg) !important;
+    background-color:  #000000;
     color: #fff;
     overflow-x: hidden;
+}
+
+ul {
+    color: white;
 }
 
 /* Background Gradients from original source */
@@ -336,4 +340,6 @@ body::before {
         border-radius: 8px;
         margin-top: 10px;
     }
+
 }
+
