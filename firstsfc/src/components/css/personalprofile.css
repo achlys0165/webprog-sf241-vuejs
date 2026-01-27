@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: var(--bg) !important;
+    background-color: white;
     color: #fff;
     overflow-x: hidden;
 }
@@ -336,4 +336,5 @@ body::before {
         border-radius: 8px;
         margin-top: 10px;
     }
+
 }
