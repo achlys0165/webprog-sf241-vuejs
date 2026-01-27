@@ -314,4 +314,5 @@ export default {
     }
 }
 </script>
-<style src="./css/personalprofile.css"></style>
+
+<style></style>
