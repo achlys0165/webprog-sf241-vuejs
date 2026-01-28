@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: red;
+    background-color: #000000;
     color: #fff;
     overflow-x: hidden;
 }
@@ -24,7 +24,7 @@ ul {
 }
 
 /* Background Gradients from original source */
-/* body::before {
+body::before {
     content: "";
     position: fixed;
     inset: 0;
@@ -342,6 +342,7 @@ ul {
     }
 
 }
+
 
 
 
