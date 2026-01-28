@@ -10,6 +10,7 @@ async function getInstruments() {
 }
 
 onMounted(() => {
+   console.log("App mounted! Fetching data...") // If you don't see this in F12, the app crashed before this line.
    getInstruments()
 })
 </script>
