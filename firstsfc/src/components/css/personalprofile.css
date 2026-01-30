@@ -19,10 +19,6 @@ body {
     overflow-x: hidden;
 }
 
-li {
-    color: #000;
-}
-
 /* Background Gradients from original source */
 body::before {
     content: "";

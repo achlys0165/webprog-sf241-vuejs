@@ -58,6 +58,11 @@
     margin-bottom: 1rem;
   }
   
+  li {
+    color: black;
+    font-weight: normal; /* Optional: ensures it isn't bold unless you want it to be */
+  }
+
   label {
     display: block;
     margin-bottom: 0.5rem;
