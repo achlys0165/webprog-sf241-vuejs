@@ -19,9 +19,6 @@ body {
     overflow-x: hidden;
 }
 
-ul {
-    color: white;
-}
 
 /* Background Gradients from original source */
 body::before {
