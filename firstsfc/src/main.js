@@ -12,8 +12,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import PersonalProfile from './components/PersonalProfile.vue'
 
 const app = createApp(App)
-app.component1('food-item', FoodItem)
-app.component1('food-item2', FoodItem2)
+app.component('food-item', FoodItem)
+app.component('food-item2', FoodItem2)
 app.component('personal-profile', PersonalProfile)
 app.component('comment-form', CommentForm)
 app.component('comment', Comment)
