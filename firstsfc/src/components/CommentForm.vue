@@ -58,20 +58,22 @@
     margin-bottom: 1rem;
   }
   
-  li {
+  h2 {
     color: black;
-    font-weight: normal; /* Optional: ensures it isn't bold unless you want it to be */
   }
+
 
   label {
     display: block;
     margin-bottom: 0.5rem;
+    color: black;
   }
   
   .form-control {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
+    color: black;
     border-radius: 4px;
   }
   
